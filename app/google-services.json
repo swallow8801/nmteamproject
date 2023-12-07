@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "631171383862",
+    "project_id": "capd-teamproject",
+    "storage_bucket": "capd-teamproject.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:631171383862:android:b3611a14222787c021ce97",
+        "android_client_info": {
+          "package_name": "com.example.teamprojectapplication"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB71WDtU6YhhwQJRmjSUIiBu2F77WPZPRQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

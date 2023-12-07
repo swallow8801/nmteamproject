@@ -1,0 +1,448 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/mainview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/background">
+
+
+            <com.bluehomestudio.luckywheel.LuckyWheel
+                android:id="@+id/luck_wheel"
+                android:layout_width="370dp"
+                android:layout_height="370dp"
+                android:layout_gravity="center"
+                app:background_color="@android:color/white"
+                app:layout_constraintBottom_toTopOf="@+id/spin_btn"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.478"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.659">
+
+            </com.bluehomestudio.luckywheel.LuckyWheel>
+
+            <ImageView
+                android:id="@+id/spin_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="44dp"
+                android:src="@drawable/start_resize"
+                android:textColor="@android:color/white"
+                android:textSize="25sp"
+                app:layout_constraintBottom_toTopOf="@+id/resultview"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"></ImageView>
+
+            <TextView
+                android:id="@+id/resultview"
+                android:layout_width="300dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/view_border"
+                android:fontFamily="@font/bmjua_ttf"
+                android:gravity="center"
+                android:textColor="#000000"
+                android:textSize="40dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.494"
+                app:layout_constraintStart_toStartOf="parent"></TextView>
+
+            <ImageView
+                android:id="@+id/btn_change1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/xxx"
+                app:layout_constraintBottom_toTopOf="@+id/luck_wheel"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.94"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.295"></ImageView>
+
+            <ImageView
+                android:id="@+id/mainbackbtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="236dp"
+                android:background="@drawable/backbtn_resize"
+                app:layout_constraintBottom_toTopOf="@+id/luck_wheel"
+                app:layout_constraintEnd_toStartOf="@+id/btn_change1"
+                app:layout_constraintHorizontal_bias="0.842"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.266"></ImageView>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/slide_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="invisible">
+            <ScrollView
+                android:id="@+id/rootview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="790dp"
+                    android:orientation="vertical"
+                    android:background="@drawable/white">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_weight="2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:background="@drawable/img">
+
+
+                        <LinearLayout
+                            android:id="@+id/number1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="12dp"
+                            android:orientation="horizontal"
+                            android:visibility="visible"
+                            app:layout_constraintBottom_toTopOf="@+id/number2"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.504"
+                            app:layout_constraintStart_toStartOf="parent">
+
+                            <TextView
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_margin="10dp"
+                                android:background="@drawable/magnitude_1_circle"
+                                android:fontFamily="sans-serif-medium"
+                                android:gravity="center"
+                                android:text="1"
+                                android:textColor="@android:color/white"
+                                android:textSize="30sp"></TextView>
+
+
+                            <EditText
+                                android:id="@+id/et1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="50dp"
+                                android:layout_gravity="center_vertical"
+                                android:background="@drawable/view_border"
+                                android:ems="7"
+                                android:fontFamily="@font/bmjua_ttf"
+                                android:gravity="center"
+                                android:hint="벌칙 입력"
+                                android:textColor="@android:color/black"
+                                android:singleLine="true"
+                                android:lines="1"
+                                android:textSize="30dp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/number2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="16dp"
+                            android:orientation="horizontal"
+                            android:visibility="visible"
+                            app:layout_constraintBottom_toTopOf="@+id/number3"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.504"
+                            app:layout_constraintStart_toStartOf="parent">
+
+                            <TextView
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_margin="10dp"
+                                android:background="@drawable/magnitude_2_circle"
+                                android:fontFamily="sans-serif-medium"
+                                android:gravity="center"
+                                android:text="2"
+                                android:textColor="@android:color/white"
+                                android:textSize="30sp"></TextView>
+
+
+                            <EditText
+                                android:id="@+id/et2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="50dp"
+                                android:layout_gravity="center_vertical"
+                                android:background="@drawable/view_border"
+                                android:ems="7"
+                                android:fontFamily="@font/bmjua_ttf"
+                                android:gravity="center"
+                                android:hint="벌칙 입력"
+                                android:textColor="@android:color/black"
+                                android:singleLine="true"
+                                android:lines="1"
+                                android:textSize="30dp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/number3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="16dp"
+                            android:orientation="horizontal"
+                            android:visibility="visible"
+                            app:layout_constraintBottom_toTopOf="@+id/number4"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.504"
+                            app:layout_constraintStart_toStartOf="parent">
+
+                            <TextView
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_margin="10dp"
+                                android:background="@drawable/magnitude_3_circle"
+                                android:fontFamily="sans-serif-medium"
+                                android:gravity="center"
+                                android:text="3"
+                                android:textColor="@android:color/white"
+                                android:textSize="30sp"></TextView>
+
+
+                            <EditText
+                                android:id="@+id/et3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="50dp"
+                                android:layout_gravity="center_vertical"
+                                android:background="@drawable/view_border"
+                                android:ems="7"
+                                android:fontFamily="@font/bmjua_ttf"
+                                android:gravity="center"
+                                android:textColor="@android:color/black"
+                                android:singleLine="true"
+                                android:lines="1"
+                                android:hint="벌칙 입력"
+                                android:textSize="30dp" />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/number4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="16dp"
+                            android:orientation="horizontal"
+                            android:visibility="visible"
+                            app:layout_constraintBottom_toTopOf="@+id/number5"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.496"
+                            app:layout_constraintStart_toStartOf="parent">
+
+                            <TextView
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_margin="10dp"
+                                android:background="@drawable/magnitude_4_circle"
+                                android:fontFamily="sans-serif-medium"
+                                android:gravity="center"
+                                android:text="4"
+                                android:textColor="@android:color/white"
+                                android:textSize="30sp"></TextView>
+
+
+                            <EditText
+                                android:id="@+id/et4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="50dp"
+                                android:layout_gravity="center_vertical"
+                                android:background="@drawable/view_border"
+                                android:ems="7"
+                                android:fontFamily="@font/bmjua_ttf"
+                                android:gravity="center"
+                                android:hint="벌칙 입력"
+                                android:textColor="@android:color/black"
+                                android:singleLine="true"
+                                android:lines="1"
+                                android:textSize="30dp" />
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/number5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="16dp"
+                            android:orientation="horizontal"
+                            android:visibility="visible"
+                            app:layout_constraintBottom_toTopOf="@+id/number6"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.504"
+                            app:layout_constraintStart_toStartOf="parent">
+
+                            <TextView
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_margin="10dp"
+                                android:background="@drawable/magnitude_5_circle"
+                                android:fontFamily="sans-serif-medium"
+                                android:gravity="center"
+                                android:text="5"
+                                android:textColor="@android:color/white"
+                                android:textSize="30sp"></TextView>
+
+
+                            <EditText
+                                android:id="@+id/et5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="50dp"
+                                android:layout_gravity="center_vertical"
+                                android:background="@drawable/view_border"
+                                android:ems="7"
+                                android:fontFamily="@font/bmjua_ttf"
+                                android:gravity="center"
+                                android:hint="벌칙 입력"
+                                android:textColor="@android:color/black"
+                                android:singleLine="true"
+                                android:lines="1"
+                                android:textSize="30dp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/number6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="164dp"
+                            android:orientation="horizontal"
+                            android:visibility="visible"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.504"
+                            app:layout_constraintStart_toStartOf="parent">
+
+
+                            <TextView
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_margin="10dp"
+                                android:background="@drawable/magnitude_6_circle"
+                                android:fontFamily="sans-serif-medium"
+                                android:gravity="center"
+                                android:text="6"
+                                android:textColor="@android:color/white"
+                                android:textSize="30sp"></TextView>
+
+                            <EditText
+                                android:id="@+id/et6"
+                                android:layout_width="wrap_content"
+                                android:layout_height="50dp"
+                                android:layout_gravity="center_vertical"
+                                android:background="@drawable/view_border"
+                                android:ems="7"
+                                android:fontFamily="@font/bmjua_ttf"
+                                android:gravity="center"
+                                android:hint="벌칙 입력"
+                                android:textColor="@android:color/black"
+                                android:singleLine="true"
+                                android:lines="1"
+                                android:textSize="30dp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/linearLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:layout_marginBottom="24dp"
+                            android:gravity="center"
+                            app:layout_constraintBottom_toTopOf="@+id/number1"
+                            tools:layout_editor_absoluteX="0dp">
+
+                            <ImageView
+                                android:id="@+id/btn_minus"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/minus_resize" />
+
+                            <!-- 두 번째 버튼 -->
+
+                            <!-- 세 번째 버튼 -->
+                            <TextView
+                                android:id="@+id/tv_count"
+                                android:layout_width="50dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginRight="20dp"
+                                android:fontFamily="@font/bmjua_ttf"
+                                android:gravity="center"
+                                android:text="2"
+                                android:textColor="#000000"
+                                android:textSize="60dp"
+                                tools:layout_editor_absoluteX="196dp"
+                                tools:layout_editor_absoluteY="232dp"></TextView>
+
+                            <ImageView
+                                android:id="@+id/btn_add"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/plrus_resize" />
+
+                        </LinearLayout>
+
+                        <ImageView
+                            android:id="@+id/backbtn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:background="@drawable/backbtn_resize"
+                            android:text="back"
+                            app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.045"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"></ImageView>
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </ScrollView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:visibility="visible"
+            android:id="@+id/howtoplay9"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/howtoplay9">
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </FrameLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
