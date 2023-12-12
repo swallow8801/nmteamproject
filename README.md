@@ -1,6 +1,8 @@
 # 캡스톤디자인 팀 프로젝트
 #### 2023.09.06 - 2023.12.13 까지 진행된 "캡스톤디자인" 팀 프로젝트로 12.13에 진행한 컴퓨터공학과 학술제에서 "캡스톤디자인 우수작"으로 선정되어 발표를 하게되었습니다.
 
+#### [다운로드](https://drive.google.com/file/d/14SHkRxdkNTZVSxXOyVUPtHfjLyLODG6w/view?usp=drive_link)
+
 
 ## 프로젝트 소개
 
